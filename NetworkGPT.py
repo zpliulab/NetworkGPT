@@ -33,7 +33,7 @@ def is_csv_or_xlsx(file_name):
     return file_name.lower().endswith(('.csv', '.xlsx'))
 
 
-class NetGPT:
+class NetworkGPT:
     def __init__(self, args):
         self.args = args
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -433,7 +433,7 @@ class NetGPT:
     def evaluation(self, adj_final, truelabel):
         performance = Evaluation(y_pred=np.array(adj_final).flatten(), y_true=truelabel.flatten())
         print(
-            f"NetGPT*-AUROC: {performance['AUC']:.4f} "
+            f"NetworkGPT*-AUROC: {performance['AUC']:.4f} "
             f"AUPRC: {performance['AUPR']:.4f} "
             f"AUPRM: {performance['AUPR_norm']:.4f} "
             f"F1-score: {performance['F1']:.4f}")
@@ -530,14 +530,14 @@ if __name__ == '__main__':
     # # 针对情况1：
     # # train_filename = 'pathway/simulation/SERGIO_data_node_2000.data'   # 您的基因表达谱和网络输入数据，详情参考补充S1，
     # # args.pca_file = 'result/simu_pca_model.pkl'                        # 这是一个pca参数文件，它需要在测试步骤被加载。
-    # # trainer = NetGPT(args)
+    # # trainer = NetworkGPT(args)
     # # trainer.train(train_filename, n_train=200, n_test=[1000, 1010])  # 训练模拟数据
     #
     # # 针对情况2：
     # train_filename = 'CancerDatasets/DCA/FILE1T_cell_BRCA_output.csv'  # 请输入您的基因表达谱（以csv或xlsx结尾），如果在这之前想处理您的测序数据，例如矩阵补全和质控，请参考补充S2
     # args.pca_file = 'result/FILE1T_cell_pca_model.pkl'  # 这是一个pca参数文件，它需要在测试步骤被加载。
     # args.test_pathway = "hsa05224"  # 在训练过程中，如果您想从基因列表中删除某些基因集合，请填写对应的KEGG库ID号。
-    # trainer = NetGPT(args)
+    # trainer = NetworkGPT(args)
     # trainer.train(train_filename)  # 训练模拟数据
     #
     # # test_filename = 'pathway/simulation/SERGIO_data_for_test.data'
@@ -551,7 +551,7 @@ if __name__ == '__main__':
     # args.test_pathway = "hsa05224"
     # args.pca_file = 'result/FILE1T_cell_pca_model.pkl'
     #
-    # trainer = NetGPT(args)
+    # trainer = NetworkGPT(args)
     # results = {'AUC': [], 'AUPR': [], 'AUPR_norm': [], 'F1': [], 'nodenum': []}
     # test_num = 1
     # result_filename = 'result/FILE1_dignet.data'

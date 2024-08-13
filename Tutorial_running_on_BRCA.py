@@ -1,7 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore")
 from config import Config
-from NetGPT import NetGPT
+from NetworkGPT import NetworkGPT
 import torch
 
 if __name__ == '__main__':
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     test_filename = train_filename
     args.pca_file = 'result/BRCA_Tumor_'+str(cell)+'_pca_model.pkl'
     args.save_label = 'Training_reg_BRCA_Tumor_'+str(cell)+'_data'
-    trainer = NetGPT(args)
+    trainer = NetworkGPT(args)
 
     # 3. Training process
     if traning:

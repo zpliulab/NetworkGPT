@@ -3,7 +3,7 @@ warnings.filterwarnings("ignore")
 import torch
 import pickle
 from config import Config
-from NetGPT import NetGPT
+from NetworkGPT import NetworkGPT
 import numpy as np
 from tqdm import tqdm
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     args.net_key_par = {'Flag_reg': True, 'Flag_llm': False, 'LLM_metric': 'euclidean'}
 
     # 3. Training process
-    trainer = NetGPT(args)
+    trainer = NetworkGPT(args)
     if traning:
         best_mean_AUC, train_model_file, printf = trainer.train(train_filename, n_train=100, n_test=[1000, 1000+10])
         with open('Run_all_sample_on_simulation.txt', 'a') as file:
@@ -52,6 +52,6 @@ if __name__ == '__main__':
     golbalmeanAUC = np.mean(results['AUC'])
     golbalmeanAUPR = np.mean(results['AUPR'])
     golbalmeanF1 = np.mean(results['F1'])
-    print(f"NetGPT - AUROC average: {golbalmeanAUC:.4f} AUPRC average: {golbalmeanAUPR:.4f}  F1-score average: {golbalmeanF1:.4f}")
+    print(f"NetworkGPT - AUROC average: {golbalmeanAUC:.4f} AUPRC average: {golbalmeanAUPR:.4f}  F1-score average: {golbalmeanF1:.4f}")
     print(f'**************   Task is finished! The result are saved in {str(result_filename)} !   **************')
 

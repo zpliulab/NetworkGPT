@@ -39,7 +39,7 @@ class Config:
         self.theta_PPC = 40                         # PPC threshold
         self.database = ['STRING', 'TRRUST', 'KEGG']                 # Database name: RegNetwork, STRING, KEGG or None
         self.LLM_filepath = 'LLM/Geneformer_S33_T_cell_BRCA_output.csv'   # LLM path scFoundation, Geneformer, BioBERT, or None
-        self.net_key_par = {'Flag_reg': False, 'Flag_llm': False, 'LLM_metric': 'cos'}  
+        self.net_key_par = {'Flag_reg': False, 'Flag_llm': False, 'LLM_metric': 'cos'} 
 #
 # # Define config
 # config = {

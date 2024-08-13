@@ -1,7 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore")
 from config import Config
-from NetGPT import NetGPT
+from NetworkGPT import NetworkGPT
 import os
 import torch
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     args.save_label = 'Training_HCC_' + str(tis) + '_' + str(cell) + '_data'
     args.LLM_filepath = 'LLM/Geneformer_' + str(tis) + '_' + str(
         cell) + '_HCC_output.csv'  # LLM path scFoundation, Geneformer, BioBERT, or None
-    trainer = NetGPT(args)
+    trainer = NetworkGPT(args)
 
     # 3. Training process
     if traning:
