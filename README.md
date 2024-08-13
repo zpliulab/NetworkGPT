@@ -7,7 +7,6 @@
 **Please write to [zpliu@sdu.edu.cn](mailto:zpliu@sdu.edu.cn) if you have any questions.**
 
 **Please cite our paper if it helps you.**
-https://github.com/zpliulab/NetworkGPT/blob/main/images/logo.png
 ![workfolw](https://github.com/zpliulab/NetworkGPT/blob/main/images/logo.png)
 ## NetworkGPT User Guide
 
