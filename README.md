@@ -8,7 +8,7 @@
 
 **Please cite our paper if it helps you.**
 
-![workfolw](https://github.com/zpliulab/NetworkGPT/blob/main/images/framework.png)
+![workfolw](https://github.com/zpliulab/NetworkGPT/blob/main/images/logo.png)
 
 ## NetworkGPT User Guide
 
