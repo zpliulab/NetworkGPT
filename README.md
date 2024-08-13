@@ -7,9 +7,7 @@
 **Please write to [zpliu@sdu.edu.cn](mailto:zpliu@sdu.edu.cn) if you have any questions.**
 
 **Please cite our paper if it helps you.**
-
-![workfolw](https://github.com/zpliulab/NetworkGPT/blob/main/images/framework.png)
-
+![workfolw](https://github.com/zpliulab/NetworkGPT/blob/main/images/logo.png)
 ## NetworkGPT User Guide
 
 ```NetworkGPT``` is a tool designed specifically for scRNA-seq data analysis and network modeling. This guide will instruct you on how to train and test models with ```NetworkGPT```, as well as the requirements for preparing and inputting data.
